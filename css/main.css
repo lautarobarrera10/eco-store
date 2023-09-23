@@ -2,11 +2,28 @@ body {
   margin: 0;
   padding: 0;
   font-size: "IBM Plex Sans", sans-serif;
+  background-color: #ffefe7;
 }
 
 nav {
+  padding: 0 40px;
   height: 135px;
-  background-color: #ffefe7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav p {
+  font-size: 30px;
+  color: #7C6A0A;
+}
+nav .icons {
+  display: flex;
+  gap: 4px;
+}
+nav .icons button {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 main {

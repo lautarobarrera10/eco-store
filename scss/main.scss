@@ -2,10 +2,25 @@ $primary-color: #ffefe7;
 $secundary-color: #ffdac6;
 $tertiary-color: #babd8d;
 $primary-text-color: #7c6a0a;
+$alternative-color: #FA9500;
 $font-stack: 'IBM Plex Sans', sans-serif;
 
 body {
     margin: 0;
     padding: 0;
     font-size: $font-stack;
+}
+
+nav {
+    height: 135px;
+    background-color: $primary-color;
+}
+
+main {
+    background-color: $primary-color;
+}
+
+footer {
+    height: 461px;
+    background-color: $alternative-color;
 }

@@ -2,4 +2,18 @@ body {
   margin: 0;
   padding: 0;
   font-size: "IBM Plex Sans", sans-serif;
+}
+
+nav {
+  height: 135px;
+  background-color: #ffefe7;
+}
+
+main {
+  background-color: #ffefe7;
+}
+
+footer {
+  height: 461px;
+  background-color: #FA9500;
 }/*# sourceMappingURL=main.css.map */

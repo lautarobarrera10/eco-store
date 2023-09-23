@@ -27,6 +27,21 @@ Los podemos utilizar en cualquier parte de la hoja de estilos
 - Tienen un valor único correspondiente a un elemento
 - Son imperativas
 
+#### Variables locales
+- Están declaradas dentro de un bloque **{}**
+- Cualquier selector anidado puede acceder a las variables locales declaradas dentro del selector
 
-### !defaul flag
+#### Variables globales
+Por default, todas las variables declaradas fuera de un selector son globales.
+
+#### Shadowing (concepto)
+Las variables locales y globales pueden tener los mismo nombres, ya que se encuentran en diferente nivel del scope
+Esto puede ayudar a que no se llegue a modificar por error el valor de las variables globales
+
+### flags
+
+#### !defaul flag
 Se encarga de asignar un valor a la variable si y solo si esa variable no está definicina o su valor es null
+
+#### !global flag
+En caso de querer modificar el valor global de una variable dentro del scope de una variable local, se hace uso de la flag !global

@@ -1,8 +1,18 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1440px;
+  font-family: "IBM Plex Sans", sans-serif;
   background-color: #ffefe7;
+}
+
+button {
+  cursor: pointer;
 }
 
 nav {
@@ -23,11 +33,44 @@ nav .icons {
 nav .icons button {
   border: none;
   background: none;
-  cursor: pointer;
 }
 
 main {
-  background-color: #ffefe7;
+  padding: 0 40px;
+}
+main article.hero {
+  display: flex;
+  justify-content: space-between;
+}
+main article.hero .info-section {
+  width: 592px;
+  color: #7C6A0A;
+}
+main article.hero .info-section h1 {
+  margin-block: 20px;
+  font-size: 60px;
+  font-weight: 600;
+}
+main article.hero .info-section p {
+  margin-block: 60px;
+  font-size: 25px;
+}
+main article.hero .info-section button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 23px;
+  font-weight: 700;
+  color: white;
+  background-color: #FA9500;
+  border: none;
+  border-radius: 35px;
+}
+main article.hero .image-section {
+  width: 30%;
+}
+main article.hero .image-section img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 footer {

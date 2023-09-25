@@ -5,11 +5,22 @@ $primary-text-color: #7C6A0A;
 $alternative-color: #FA9500;
 $font-stack: 'IBM Plex Sans', sans-serif;
 
-body {
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: $font-stack;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    font-family: $font-stack;
     background-color: $primary-color;
+}
+
+button {
+    cursor: pointer;
 }
 
 nav {
@@ -28,13 +39,46 @@ nav {
         button {
             border: none;
             background: none;
-            cursor: pointer;
         }
     }
 }
 
 main {
-    background-color: $primary-color;
+    padding: 0 40px;
+    article.hero {
+        display: flex;
+        justify-content: space-between;
+        .info-section {
+            width: 592px;
+            color: $primary-text-color;
+            h1 {
+                margin-block: 20px;
+                font-size: 60px;
+                font-weight: 600;
+            }
+            p {
+                margin-block: 60px;
+                font-size: 25px;
+            }
+            button {
+                margin-top: 20px;
+                padding: 12px 24px;
+                font-size: 23px;
+                font-weight: 700;
+                color: white;
+                background-color: $alternative-color;
+                border: none;
+                border-radius: 35px;
+            }
+        }
+        .image-section {
+            width: 30%;
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
 }
 
 footer {

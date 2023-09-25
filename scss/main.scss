@@ -44,7 +44,7 @@ nav {
 }
 
 main {
-    padding: 0 40px;
+    padding: 40px 40px;
     article.hero {
         display: flex;
         justify-content: space-between;
@@ -78,6 +78,61 @@ main {
                 border-radius: 10px;
             }
         }
+    }
+}
+
+section.catalogo {
+    color: $primary-text-color;
+    h2 {
+        margin-block: 70px;
+        font-size: 50px;
+        font-weight: 400;
+    }
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+    .product-card {
+        width: 324px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: $secundary-color;
+        border-radius: 8px;
+        svg {
+            margin: 16px;
+            cursor: pointer;
+        }
+        .product-image {
+            margin: 0 auto;
+            width: 75%;
+            height: 300px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 6px;
+            }
+        }
+        h3, p {
+            margin: 0 auto;
+            width: 75%;
+        }
+        h3 {
+            margin-top: 20px;
+            font-size: 25px;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 50px;
+            font-size: 15px;
+        }
+    }
+    .forniture {
+        @extend .product-card;
+        color: white;
+        background-color: $tertiary-color;
     }
 }
 

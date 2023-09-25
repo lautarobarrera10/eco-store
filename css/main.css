@@ -36,7 +36,7 @@ nav .icons button {
 }
 
 main {
-  padding: 0 40px;
+  padding: 40px 40px;
 }
 main article.hero {
   display: flex;
@@ -71,6 +71,60 @@ main article.hero .image-section {
 main article.hero .image-section img {
   width: 100%;
   border-radius: 10px;
+}
+
+section.catalogo {
+  color: #7C6A0A;
+}
+section.catalogo h2 {
+  margin-block: 70px;
+  font-size: 50px;
+  font-weight: 400;
+}
+section.catalogo .card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+section.catalogo .product-card, section.catalogo .forniture {
+  width: 324px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #ffdac6;
+  border-radius: 8px;
+}
+section.catalogo .product-card svg, section.catalogo .forniture svg {
+  margin: 16px;
+  cursor: pointer;
+}
+section.catalogo .product-card .product-image, section.catalogo .forniture .product-image {
+  margin: 0 auto;
+  width: 75%;
+  height: 300px;
+}
+section.catalogo .product-card .product-image img, section.catalogo .forniture .product-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+section.catalogo .product-card h3, section.catalogo .forniture h3, section.catalogo .product-card p, section.catalogo .forniture p {
+  margin: 0 auto;
+  width: 75%;
+}
+section.catalogo .product-card h3, section.catalogo .forniture h3 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+section.catalogo .product-card p, section.catalogo .forniture p {
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+section.catalogo .forniture {
+  color: white;
+  background-color: #babd8d;
 }
 
 footer {

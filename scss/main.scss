@@ -192,7 +192,7 @@ section.about-us {
             @include flexBox(row, space-between, none);
             div {
                 @include flexBox(row, none, center);
-                @include boxSize(396px, 398px);
+                @include boxSize(360px, 360px);
                 border-radius: 16px;
                 overflow: hidden;
                 &:hover {
@@ -216,6 +216,9 @@ section.about-us {
         }
         p.coordenadas {
             font-size: 25px;
+        }
+        img {
+            width: 100%;
         }
     }
 }

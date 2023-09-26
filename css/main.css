@@ -194,8 +194,8 @@ section.about-us .gallery .gallery-container div {
   flex-direction: row;
   justify-content: none;
   align-items: center;
-  width: 396px;
-  height: 398px;
+  width: 360px;
+  height: 360px;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -220,6 +220,9 @@ section.about-us .location p {
 }
 section.about-us .location p.coordenadas {
   font-size: 25px;
+}
+section.about-us .location img {
+  width: 100%;
 }
 
 footer {

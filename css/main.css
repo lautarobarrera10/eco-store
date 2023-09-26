@@ -19,6 +19,7 @@ nav {
   padding: 0 40px;
   height: 135px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -31,14 +32,18 @@ nav .icons {
   gap: 4px;
 }
 nav .icons button {
-  border: none;
   background: none;
+  border: none;
 }
 
 main {
   padding: 40px 40px;
 }
 main article.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
   display: flex;
   justify-content: space-between;
 }
@@ -56,13 +61,16 @@ main article.hero .info-section p {
   font-size: 25px;
 }
 main article.hero .info-section button {
+  background: none;
+  border: none;
+}
+main article.hero .info-section button {
   margin-top: 20px;
   padding: 12px 24px;
   font-size: 23px;
   font-weight: 700;
   color: white;
   background-color: #FA9500;
-  border: none;
   border-radius: 35px;
 }
 main article.hero .image-section {
@@ -73,61 +81,173 @@ main article.hero .image-section img {
   border-radius: 10px;
 }
 
+section {
+  margin-top: 120px;
+}
+
 section.catalogo {
   color: #7C6A0A;
 }
 section.catalogo h2 {
-  margin-block: 70px;
+  margin-bottom: 100px;
   font-size: 50px;
   font-weight: 400;
 }
 section.catalogo .card-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: none;
   flex-wrap: wrap;
   gap: 80px;
 }
-section.catalogo .product-card, section.catalogo .forniture {
+section.catalogo .product-card, section.catalogo .furniture {
   width: 324px;
   display: flex;
   flex-direction: column;
+  justify-content: none;
   align-items: flex-end;
   background-color: #ffdac6;
   border-radius: 8px;
 }
-section.catalogo .product-card svg, section.catalogo .forniture svg {
+section.catalogo .product-card svg, section.catalogo .furniture svg {
   margin: 16px;
   cursor: pointer;
 }
-section.catalogo .product-card .product-image, section.catalogo .forniture .product-image {
+section.catalogo .product-card .product-image, section.catalogo .furniture .product-image {
   margin: 0 auto;
-  width: 75%;
+  width: 70%;
   height: 300px;
 }
-section.catalogo .product-card .product-image img, section.catalogo .forniture .product-image img {
+section.catalogo .product-card .product-image img, section.catalogo .furniture .product-image img {
   width: 100%;
   height: 100%;
   border-radius: 6px;
 }
-section.catalogo .product-card h3, section.catalogo .forniture h3, section.catalogo .product-card p, section.catalogo .forniture p {
+section.catalogo .product-card h3, section.catalogo .furniture h3, section.catalogo .product-card p, section.catalogo .furniture p {
   margin: 0 auto;
   width: 75%;
 }
-section.catalogo .product-card h3, section.catalogo .forniture h3 {
+section.catalogo .product-card h3, section.catalogo .furniture h3 {
   margin-top: 20px;
   font-size: 25px;
   font-weight: 600;
 }
-section.catalogo .product-card p, section.catalogo .forniture p {
+section.catalogo .product-card p, section.catalogo .furniture p {
   margin-bottom: 50px;
   font-size: 15px;
 }
-section.catalogo .forniture {
+section.catalogo .product-card:hover, section.catalogo .furniture:hover {
+  transition: 0.2s all;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+section.catalogo .furniture-container {
+  margin-top: 120px;
+}
+section.catalogo .furniture {
   color: white;
   background-color: #babd8d;
 }
 
+section.about-us {
+  margin-block: 80px;
+  color: #7C6A0A;
+}
+section.about-us .why-us {
+  margin-bottom: 200px;
+}
+section.about-us .why-us h2 {
+  margin-bottom: 100px;
+  font-size: 50px;
+  font-weight: 500;
+}
+section.about-us .why-us div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.about-us .why-us div div {
+  width: 535px;
+  text-align: center;
+  font-size: 30px;
+}
+section.about-us .why-us div .heart {
+  gap: 20px;
+}
+section.about-us .gallery {
+  margin-bottom: 120px;
+}
+section.about-us .gallery h2 {
+  margin-bottom: 100px;
+  font-size: 50px;
+  font-weight: 500;
+}
+section.about-us .gallery .gallery-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: none;
+}
+section.about-us .gallery .gallery-container div {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+  width: 396px;
+  height: 398px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+section.about-us .gallery .gallery-container div:hover {
+  transition: 0.2s all;
+  transform: scale(1.01);
+  cursor: pointer;
+}
+section.about-us .gallery .gallery-container img {
+  width: 100%;
+}
+section.about-us .location h2 {
+  margin-bottom: 100px;
+  font-size: 50px;
+  font-weight: 500;
+}
+section.about-us .location div {
+  margin-bottom: 24px;
+}
+section.about-us .location p {
+  font-size: 35px;
+}
+section.about-us .location p.coordenadas {
+  font-size: 25px;
+}
+
 footer {
-  height: 461px;
+  padding: 40px;
+  color: white;
   background-color: #FA9500;
+}
+footer h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+footer p {
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+footer .social div {
+  width: 42px;
+  height: 42px;
+  transform: translateY(16px);
+}
+footer .social div img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

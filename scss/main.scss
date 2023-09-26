@@ -5,6 +5,33 @@ $primary-text-color: #7C6A0A;
 $alternative-color: #FA9500;
 $font-stack: 'IBM Plex Sans', sans-serif;
 
+@mixin boxSize($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flexBox($direction, $content, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $align;
+}
+
+@mixin buttonStyle {
+    button {
+        background: none;
+        border: none;
+    }
+}
+
+@mixin h2Style ($weigth) {
+    h2 {
+        margin-bottom: 100px;
+        font-size: 50px;
+        font-weight: $weigth;
+    }
+}
+
 
 * {
     box-sizing: border-box;
@@ -23,12 +50,12 @@ button {
     cursor: pointer;
 }
 
+
+
 nav {
     padding: 0 40px;
     height: 135px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexBox(row, space-between, center);
     p {
         font-size: 30px;
         color: $primary-text-color;
@@ -36,16 +63,14 @@ nav {
     .icons {
         display: flex;
         gap: 4px;
-        button {
-            border: none;
-            background: none;
-        }
+        @include buttonStyle;
     }
 }
 
 main {
     padding: 40px 40px;
     article.hero {
+        @include flexBox(row, space-between, none);
         display: flex;
         justify-content: space-between;
         .info-section {
@@ -60,6 +85,7 @@ main {
                 margin-block: 60px;
                 font-size: 25px;
             }
+            @include buttonStyle;
             button {
                 margin-top: 20px;
                 padding: 12px 24px;
@@ -67,7 +93,6 @@ main {
                 font-weight: 700;
                 color: white;
                 background-color: $alternative-color;
-                border: none;
                 border-radius: 35px;
             }
         }
@@ -81,24 +106,21 @@ main {
     }
 }
 
+section {
+    margin-top: 120px;
+}
+
 section.catalogo {
     color: $primary-text-color;
-    h2 {
-        margin-block: 70px;
-        font-size: 50px;
-        font-weight: 400;
-    }
+    @include h2Style(400);
     .card-container {
-        display: flex;
-        justify-content: space-between;
+        @include flexBox(row, space-between, none);
         flex-wrap: wrap;
         gap: 80px;
     }
     .product-card {
         width: 324px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+        @include flexBox(column, none, flex-end);
         background-color: $secundary-color;
         border-radius: 8px;
         svg {
@@ -107,11 +129,9 @@ section.catalogo {
         }
         .product-image {
             margin: 0 auto;
-            width: 75%;
-            height: 300px;
+            @include boxSize(70%, 300px);
             img {
-                width: 100%;
-                height: 100%;
+                @include boxSize(100%, 100%);
                 border-radius: 6px;
             }
         }
@@ -128,15 +148,102 @@ section.catalogo {
             margin-bottom: 50px;
             font-size: 15px;
         }
+        &:hover {
+            transition: .2s all;
+            transform: scale(1.01);
+            cursor: pointer;
+        }
     }
-    .forniture {
+    .furniture-container {
+        margin-top: 120px
+    }
+    .furniture {
         @extend .product-card;
         color: white;
         background-color: $tertiary-color;
     }
 }
 
+section.about-us {
+    margin-block: 80px;
+    color: $primary-text-color;
+
+    .why-us {
+        margin-bottom: 200px;
+        @include h2Style(500);
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                width: 535px;
+                text-align: center;
+                font-size: 30px;
+            }
+            .heart {
+                gap: 20px;
+            }
+        }
+    }
+    .gallery {
+        margin-bottom: 120px;
+        @include h2Style(500);
+        .gallery-container {
+            @include flexBox(row, space-between, none);
+            div {
+                @include flexBox(row, none, center);
+                @include boxSize(396px, 398px);
+                border-radius: 16px;
+                overflow: hidden;
+                &:hover {
+                    transition: .2s all;
+                    transform: scale(1.01);
+                    cursor: pointer;
+                }
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .location {
+        @include h2Style(500);
+        div {
+            margin-bottom: 24px;
+        }
+        p {
+            font-size: 35px;
+        }
+        p.coordenadas {
+            font-size: 25px;
+        }
+    }
+}
+
 footer {
-    height: 461px;
+    padding: 40px;
+    color: white;
     background-color: $alternative-color;
+    h3 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    p {
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+    .social {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        div {
+            @include boxSize(42px, 42px);
+            transform: translateY(16px);
+            img {
+                @include boxSize(100%, 100%);
+                cursor: pointer;
+            }
+        }
+    }
 }

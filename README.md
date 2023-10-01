@@ -4,6 +4,11 @@ Sitio web para prácticar y aplicar las habilidades aprendida del curso de Funda
 
 ## Notas del curso 
 
+### ¿Qué es un preprocesador?
+Un preprocesador es una herramienta que nos permite escribir pseudocódigo recibiendo como parámetro de entrada los estilos que posteriormente serán convertidos a CSS nativo. Podemos decir que funcionan de manera similar a los traductores pues al indicarle una sintaxis devuelve los valores en una sintaxis nueva.
+**Un preprocesador es un lenguaje que permite trabajar con estilos CSS haciendo uso de una sintaxis propia.**
+
+
 ### Estructura de una hoja de estilos de SASS
 Algunos statement contienen bloques y se definen entre un par de llave **{}** y son separados mediante punto y coma **;**
 
@@ -59,3 +64,14 @@ Las at-rules dentro de SASS ayudan a mantener la compatibilidad con próximas ve
 - @error, @warn, @debug (de compilación)
 - @include
 - @for, @if, @each, @while
+
+  #### ¿Para qué sirven las at-rules?
+  Para modularizar nuestros estilos.
+  **x** Son reglas de Sass que cumplen con diferentes funciones y cuenta con su sintaxis propia.
+
+  ### Herencia
+  #### ¿Qué es la herencia?
+  La herencia es un mecanismo mediante el cual un selector puede recibir estilos CSS que vienen de variables utilizadas previamente.
+
+  **x** Para hacer uso de la herencia en Sass es necesario utilizar la regla @extend.
+
